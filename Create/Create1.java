@@ -5,6 +5,10 @@ public class Create1 {
      *  Then, add those two numbers together and print the result. 
      */
     public static void main(String[] args) {
-        
+        int num1 = 2;
+        int num2 = 7;
+        int sum = num1 + num2;
+
+        System.out.println(sum);
     }
 }

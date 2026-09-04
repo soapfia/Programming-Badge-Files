@@ -27,7 +27,7 @@ public class Intro {
         //
         // ---- BEGIN CODE ----
 
-        System.out.println("[Put your name here]"); 
+        System.out.println("Sophia"); 
 
         // ---- END CODE ----
 
@@ -47,8 +47,10 @@ public class Intro {
         //
         // ---- BEGIN CODE ----
 
-        String name = "Bob";  
+        String name = "Sophia";  
         int age = 16; 
+
+        System.out.println("Hi! My name is " + name + " and I am " + age + " years old.");
 
         // TODO: print out your introduction
 
@@ -90,6 +92,14 @@ public class Intro {
         // if (/* Write your condition here */) {
         //     // Write your conditional code here
         // }
+
+        if (age == 16); { // if my age is 16...
+            System.out.println("I am 16 years old!"); // then print this statement
+        }
+        if (age >= 18); { // if my age is greater than or equal to 18...
+            System.out.println("I am an adult!"); // then print this statement
+        }
+
 
         // ---- END CODE ----
 
