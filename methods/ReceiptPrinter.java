@@ -15,6 +15,9 @@ public class ReceiptPrinter {
         =====================================
         RECEIPT
         =====================================
+        */
+
+        /* 
 
         2. After the header from above, print a list of items with their prices. For example: 
            Burger    $12.99
@@ -62,6 +65,8 @@ public class ReceiptPrinter {
     */
     public static void main(String[] args) {
 
+
+
         /*--------- PART 1 --------- */
         // 1. Print the divider and the 'RECEIPT' header
 
@@ -76,9 +81,7 @@ public class ReceiptPrinter {
 
         // 4. Write another receipt (do steps 1-3 again)
 
-
-
-
+        System.out.println("=====================================\n               RECEIPT\n=====================================");
         /*--------- PART 2 --------- */
 
         // 5.2. Run the printDivider method by uncommenting below:

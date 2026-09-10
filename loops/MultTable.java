@@ -11,7 +11,7 @@ public class MultTable {
         // 1. We will begin by choosing the first number to multiply. Create a variable with a number from 1 to 10. 
         // ---- BEGIN CODE ----
 
-        ////int randomNum = (int) (Math.random() * 11);
+        // int randomNum = (int) (Math.random() * 11);
         int num = 7;
 
         // ---- END CODE ----
@@ -42,9 +42,14 @@ public class MultTable {
 
         // System.out.println(result2 + "\n" + result3 + "\n" + result4 + "\n" + result5 + "\n" + result6 + "\n" + result7 + "\n" + result8 + "\n" + result9 + "\n" + result10);
 
+        // for (int i = 3; i <= 10; i++) {
+        //     System.out.println(num + " x " + i + " = " + (num * i));
+        // }
+
         for (int i = 1; i <= 10; i++) {
-            System.out.println();
+            System.out.println(num + " x " + i + " = " + (num * i));
         }
+
 
         // ---- END CODE ----
 
@@ -53,8 +58,9 @@ public class MultTable {
         // using a for loop instead.
         // Use the below scaffolding as a helper: 
         // 
-        // for (int i = __; i < __; __) {
-        //     System.out.println(__); 
+
+        // for (int i = 1; i <= 10; i++) {
+        //     System.out.println(num + " x " + i + " = " + (num * i));
         // }
 
 
@@ -63,5 +69,11 @@ public class MultTable {
         // 5. Modify your program so that the first number also varies from 1 to 10. You should get all the possible combinations
         //    of multiplications from 1 to 10. 
         // (Hint: what happens if you move one for loop inside another?)
+
+        for (int num1 = 1; num1 <= 10; num1++) {
+            for (int num2 = 1; num2 <= 10; num2++) {
+                System.out.println(num1 + " x " + num2 + " = " + (num1 * num2));
+            }
+        }
     }
 }
