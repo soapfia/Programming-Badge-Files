@@ -16,7 +16,7 @@ public class ReceiptPrinter {
         RECEIPT
         =====================================
         */
-
+        // System.out.println("=====================================\n               RECEIPT\n=====================================");
         /* 
 
         2. After the header from above, print a list of items with their prices. For example: 
@@ -81,82 +81,97 @@ public class ReceiptPrinter {
 
         // 4. Write another receipt (do steps 1-3 again)
 
-        System.out.println("=====================================\n               RECEIPT\n=====================================");
         /*--------- PART 2 --------- */
 
         // 5.2. Run the printDivider method by uncommenting below:
-        // printDivider();
-        // System.out.println("RECEIPT"); 
-        // printDivider(); 
+        printDivider();
+        System.out.println("RECEIPT"); 
+        printDivider(); 
 
         // 6. Create two arrays for item names and prices. 
         // ------ BEGIN CODE ------
-        // String[] names = {__, __, __};
-        // double[] prices = {__, __, __}; 
+        String[] names = {"Burger", "Fries", "Drink"};
+        double[] prices = {12.99, 3.50, 2}; 
         // ------ END CODE -----
 
         // 7.2. Print the itemized list by uncommenting below: 
-        // printItemizedList(names, prices); 
+        printItemizedList(names, prices); 
 
         // 8.2. Compute the subtotal and print it out. The code has been written for you, uncommment when ready:
-        // printDivider();
-        // double subtotal = computeSubtotal(prices); 
-        // System.out.println("Subtotal: " + subtotal); 
+        printDivider();
+        double subtotal = computeSubtotal(prices); 
+        System.out.println("Subtotal: " + subtotal); 
         
         // 9.2. Compute and print the final price below. 
-        // System.out.println("Total: " + __); 
+        System.out.println("Total: " + applyTax(subtotal)); 
 
 
         /*--------- PART 3 --------- */
         // 11.2. When you are finished with writing the printReceipt method, uncomment below and fill in the 
         //   names/prices to run it. Notice how elegant this is! 
-        // String[] names1 = {__, __, __};
-        // double[] prices1 = {__, __, __}; 
-        // printReceipt(names1, prices1); 
-        // String[] names2 = {__, __, __};
-        // double[] prices2 = {__, __, __}; 
-        // printReceipt(names2, prices2); 
+        String[] names1 = {"Burger", "Fries", "Drink"};
+        double[] prices1 = {12.99, 3.5, 2}; 
+        printReceipt(names1, prices1); 
+        String[] names2 = {"Pizza", "Salad", "Soda"};
+        double[] prices2 = {15.99, 6.5, 2.99}; 
+        printReceipt(names2, prices2); 
 
 
     }
 
-    // public static void printDivider() {
+    public static void printDivider() {
     //     // 5.1. Move your divider printing code here
-    // }
+        System.out.println("=====================================");
+    }
 
 
-    // public static void printItemizedList(String[] names, __ prices) {
+    public static void printItemizedList(String[] names, double [] prices) {
     //     // 7.1. print itemized list here
-    //     for (int i = 0; i < names.length; i++) {
-    //         String name = names[i]; 
-    //         double price = __; 
+        for (int i = 0; i < names.length; i++) {
+            String name = names[i]; 
+            double price = prices[i]; 
+
+            System.out.println(name + "\t\t\t$" + price);
+
             
     //         // print out the name and price for the current item
-    //     }
-    // }
+        }
+    }
 
-    // public static __ computeSubtotal(__ prices) {
+    public static double computeSubtotal(double[] prices) {
     //     // 8.1. Compute subtotal here
-    //     double subtotal = 0; 
-    //     for (int i = 0; i < __; i++) {
-    //         subtotal = subtotal + prices[i]; 
-    //     }
-    //     return __; 
-    // }
+        double subtotal = 0; 
+        for (int i = 0; i < prices.length; i++) {
+            subtotal = subtotal + prices[i]; 
+        }
+        return subtotal; 
+    }
 
     
-    // public static __ applyTax(__ subtotal) {
+    public static double applyTax(double subtotal) {
     //    // 9.1. compute & return final price here
-    // }
+        double taxRate = 0.07;
+        return subtotal * (1 + taxRate);
+    }
 
 
 
 
 
-    // public static void printReceipt(String[] names, double[] prices) {
+    public static void printReceipt(String[] names, double[] prices) {
     //     // 11.1. copy your current receipt printing code here and modify to allow printing any given `names` and `prices`
-    // }
+        printDivider();
+        System.out.println("RECEIPT"); 
+        printDivider(); 
 
+        printItemizedList(names, prices);
+
+        printDivider();
+
+        double subtotal = computeSubtotal(prices);
+        System.out.println("Subtotal: " + subtotal);
+        System.out.println("Total: " + applyTax(subtotal));
+    }
 
 
 
